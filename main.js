@@ -80,18 +80,23 @@ function getBookInfo(event){
 }
 
 function checkEvent(e){
-    book = e.target.parentElement;
+    const book = e.target.parentElement;
+    let id = book.getAttribute("id").toString();
     if(e.target.id == "toggle-readstatus"){
         const readStatus = book.querySelector("#hasread");
         readStatus.textContent = readStatus.textContent == "Status: Completed" ? "Status: Not Completed" : "Status: Completed";
+        for(let abook of library){
+            if(abook.id == id){
+                abook.changeStatus();
+            }
+        }
     }
     else{
-        let id = book.getAttribute("id").toString();
         library = library.filter((element)=>element.id!=id);
         books.removeChild(book);
     }
+    console.log(library);
 }
-
 
 
 function showDialog(){
