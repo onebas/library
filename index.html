@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Library | The Odin Project</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Library</h1>
+        <button id="add-book">Add Book</button>
+        <dialog>
+            <form action="/placeholder" method="post" class="book-info">
+                
+                <label for="bookname">Book Name</label>
+                <input type="text" name="bookname" id="bookname" placeholder="1948" required>
+
+                <label for="author">Author name</label>
+                <input type="text" name="author" id="author" placeholder="George Orwell" required>
+
+                <label for="numpages">Number of pages</label>
+                <input type="number" name="numpages" id="numpages" placeholder="312" min="1" required>
+
+                <div class="hasreadform">
+                    <label for="hasread">Have you read the book?</label>
+                    <input type="checkbox" name="hasread" id="hasread">
+                </div>
+
+                <button type="submit" id="submit">Submit</button>
+            </form> 
+        </dialog>
+    </header>
+
+    <main>
+        <div class="books">
+            
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

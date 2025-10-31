@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #FACEF3;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.5;
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+header{
+    background-color: #B27AFA;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+
+dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    border: 1px solid #c4bebe;
+    box-shadow: 5px 5px 5px #797777;
+    background-color: #B27AFA;
+}
+
+dialog::backdrop{
+    background-color: #FACEF3;
+}
+
+
+form{
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+    align-items: baseline;
+}
+
+label{
+    font-size: 1.25rem;
+}
+
+input{
+    font-size: 1rem;
+    border-radius: 16px;
+    padding: 12px;
+    border: 0;
+    outline: none;
+}
+
+button{
+    padding: 10px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #B27AFA;
+}
+
+button:hover{
+    background-color: #926bc5;
+}
+
+#submit{
+    align-self: center;
+}
+
+
+.books{
+    padding: 64px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(256px, min-content));
+}
+
+
+
+
+.book{
+    background-color: #B27AFA;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px #797777;
+    width: 256px;
+    padding: 16px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
